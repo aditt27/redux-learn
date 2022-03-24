@@ -7,3 +7,10 @@
         wallet: ""
     }
 }
+
+{
+    type: "UPDATE_USER_WALLET",
+    payload: {
+        wallet: ""
+    }
+}

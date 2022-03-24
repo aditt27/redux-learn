@@ -1,7 +1,10 @@
 import store from "./redux/store";
 //import { addProduct, updateProductDiscount, removeProduct } from './redux/product/action'
-import { addProduct, removeProduct, updateProductDiscount } from './redux/productSlice'
 //import { addProduct, removeProduct, updateProductDiscount } from './redux/productOld'
+import { addProduct, removeProduct, updateProductDiscount } from './redux/product'
+import { addToCart, removeFromCart } from './redux/cart'
+import { changeUser, updateUserWallet} from './redux/currentUser'
+
 
 store.subscribe(()=> {
     console.log('Store Changed!', store.getState())
@@ -40,5 +43,30 @@ store.dispatch(removeProduct({
 store.dispatch(updateProductDiscount({
     productId: 3,
     discount: 30
+}))
+
+store.dispatch(addToCart({
+    productId: 1,
+    quantity: 12,
+}))
+
+store.dispatch(addToCart({
+    productId: 2,
+    quantity: 6,
+}))
+
+store.dispatch(removeFromCart({
+    productId: 2
+}))
+
+store.dispatch(changeUser({
+    username: "adit",
+    email: "adittbudi@gmail.com",
+    role: "admin",
+    wallet: "10000"
+}))
+
+store.dispatch(updateUserWallet({
+    wallet: "14000"
 }))
 

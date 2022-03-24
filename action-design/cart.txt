@@ -1,7 +1,7 @@
 {
     type: "ADD_PRODUCT_TO_CART,
     payload: {
-        productId: "",
+        productId: 0,
         quantity: ""
     }
 }
@@ -9,6 +9,6 @@
 {
     type: "REMOVE_PRODUCT_TO_CART,
     payload: {
-        productId: ""
+        productId: 0
     }
 }

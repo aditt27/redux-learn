@@ -11,6 +11,14 @@
 {
     type: "REMOVE_PRODUCT",
     payload: {
-        productId: ""
+        productId: 0
+    }
+}
+
+{
+    type: "UPDATE_PRODUCT_DISCOUNT",
+    payload: {
+        productId: 0,
+        discount: 0
     }
 }
