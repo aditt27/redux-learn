@@ -10,24 +10,22 @@ const api = store => next => async action => {
 
     const { url, method, data, onSuccess, onError } = action.payload;
     const response = await axios.request({
-        baseURL: 'http://localhost:9001/api',
+        baseURL: 'https://fakestoreapi.com',
         url,
         method,
         data
     });
 
-    //axios resp mockup data
-    // const respData = [
-    //     {
-    //         name: "Mouse",
-    //         price: 6700,
-    //         discount: 0,
-    //         stock: 100
-    //     }
-    // ]
+    //console.log('responseData', response.data)
 
-    // console.log('response', response)
-    store.dispatch(apiProductsRequestSucceeded(response.data));
+    store.dispatch(apiProductsRequestSucceeded(response.data.map(item=> {
+        return {
+            id: item.id,
+            name: item.title,
+            price: item.price,
+            discount: 0,
+            stock: 100}
+    })));
 
 }
 
