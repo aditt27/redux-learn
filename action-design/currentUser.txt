@@ -1,0 +1,9 @@
+{
+    type: "CHANGE_USER",
+    payload: {
+        username: "",
+        email: "",
+        role: "",
+        wallet: ""
+    }
+}

@@ -1,0 +1,16 @@
+{
+    type: "ADD_PRODUCT",
+    payload: {
+        name: "",
+        price: 0,
+        discount: 0,
+        stock: 0
+    }
+}
+
+{
+    type: "REMOVE_PRODUCT",
+    payload: {
+        productId: ""
+    }
+}
