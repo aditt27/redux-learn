@@ -70,3 +70,12 @@ store.dispatch(updateUserWallet({
     wallet: "14000"
 }))
 
+store.dispatch({
+    type: 'apiRequest', //3.1 Create Action Creators
+    payload: {
+        url: '/products',
+        method: 'get'
+    }
+});
+
+
