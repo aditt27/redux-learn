@@ -1,6 +1,5 @@
-import store from "./store";
-import * as actions from './actionTypes'
-import { addProduct, updateProductDiscount, removeProduct } from './action'
+import store from "./redux/store";
+import { addProduct, updateProductDiscount, removeProduct } from './redux/product/action'
 
 store.subscribe(()=> {
     console.log('Store Changed!', store.getState())
