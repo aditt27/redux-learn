@@ -1,5 +1,7 @@
 import store from "./redux/store";
-import { addProduct, updateProductDiscount, removeProduct } from './redux/product/action'
+//import { addProduct, updateProductDiscount, removeProduct } from './redux/product/action'
+import { addProduct, removeProduct, updateProductDiscount } from './redux/productSlice'
+//import { addProduct, removeProduct, updateProductDiscount } from './redux/productOld'
 
 store.subscribe(()=> {
     console.log('Store Changed!', store.getState())
